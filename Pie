@@ -1,0 +1,15 @@
+public class Pie
+{
+    private Boolean IsNumber;
+    private Boolean IsTasty;
+    private String Filling;
+
+    void eat()
+    {
+        System.out.println("nom nom");
+    }
+    public String getFilling()
+    {
+        return Filling;
+    }
+}
