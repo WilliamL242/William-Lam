@@ -20,5 +20,12 @@ public class Main
         System.out.println(bool);
         System.out.println(d);
 
+        Pie Blueberry_Pie = new Pie();
+        Blueberry_Pie.eat();
+        String filling = Blueberry_Pie.getFilling();
+        System.out.println(filling);
+
+
+
     }
 }
