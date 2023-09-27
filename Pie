@@ -1,9 +1,18 @@
 public class Pie
 {
-    private Boolean IsNumber;
+    private Boolean OpenFace;
     private Boolean IsTasty;
     private String Filling;
 
+    public Pie(Boolean t, String f) {
+        IsTasty = t;
+        Filling = f;
+    }
+    public Pie(Boolean o, Boolean t, String f){
+        OpenFace = o;
+        IsTasty = t;
+        Filling = f;
+    }
     void eat()
     {
         System.out.println("nom nom");
