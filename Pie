@@ -3,6 +3,7 @@ public class Pie
     private Boolean OpenFace;
     private Boolean IsTasty;
     private String Filling;
+    private String Crust;
 
     public Pie(Boolean t, String f) {
         IsTasty = t;
@@ -20,5 +21,9 @@ public class Pie
     public String getFilling()
     {
         return Filling;
+    }
+    public String getCrust()
+    {
+        return Crust;
     }
 }
