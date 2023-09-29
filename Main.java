@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class Main
 {
     public static void main(String[] args)
     {
+        Scanner s = new Scanner(System.in);
+
         // final makes the variable a constant
         final Integer i = 7;
         // integer stores integers
@@ -20,15 +24,19 @@ public class Main
         System.out.println(b);
         System.out.println(d);
 
+
+
         Pie Blueberry_Pie = new Pie(true, "blueberry");
         String filling = Blueberry_Pie.getFilling();
         System.out.println(filling);
         Blueberry_Pie.eat();
 
-        Pie Key_Lime_Pie = new Pie(true, true, "key lime custard");
-        String pie_insides = Key_Lime_Pie.getFilling();
-        System.out.println(pie_insides);
-        Key_Lime_Pie.eat();
+        System.out.println("Enter a type of pie:");
+        String pie_type = s.nextLine();
 
-    }
-}
+        Pie User_pie = new Pie(true, true, pie_type);
+        String pie_insides = User_pie.getFilling();
+        String pie_crust = User_pie.getCrust();
+        System.out.println(pie_insides);
+        System.out.println(pie_crust);
+        User_pie.eat();
