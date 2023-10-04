@@ -18,6 +18,10 @@ public class Pie
     {
         System.out.println("nom nom");
     }
+    void eat(int i)
+    {
+        System.out.println("You have nomed " + i + " slices.");
+    }
     public String getFilling()
     {
         return Filling;
