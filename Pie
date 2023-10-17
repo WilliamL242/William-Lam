@@ -20,7 +20,11 @@ public class Pie
     }
     void eat(int i)
     {
-        System.out.println("You have nomed " + i + " slices.");
+        System.out.println("You have \"nomed\" " + i + " slices of pie.");
+    }
+    void calories(int c, int i)
+    {
+        System.out.println("You ate " + c*i + " Calories of pie");
     }
     public String getFilling()
     {
@@ -30,4 +34,3 @@ public class Pie
     {
         return Crust;
     }
-}
