@@ -1,5 +1,4 @@
-public class Pie
-{
+public class Pie {
     private Boolean OpenFace;
     private Boolean IsTasty;
     private String Filling;
@@ -9,28 +8,34 @@ public class Pie
         IsTasty = t;
         Filling = f;
     }
-    public Pie(Boolean o, Boolean t, String f){
+
+    public Pie(Boolean o, Boolean t, String f) {
         OpenFace = o;
         IsTasty = t;
         Filling = f;
     }
-    void eat()
-    {
+
+    void eat() {
         System.out.println("nom nom");
     }
-    void eat(int i)
-    {
+
+    void eat(int i) {
         System.out.println("You have \"nomed\" " + i + " slices of pie.");
     }
-    void calories(int c, int i)
-    {
-        System.out.println("You ate " + c*i + " Calories of pie");
+
+    void calories(int c, int i) {
+        System.out.println("You ate " + c * i + " Calories of pie");
     }
-    public String getFilling()
-    {
+
+    public String getFilling() {
         return Filling;
     }
-    public String getCrust()
-    {
+
+    public String getCrust() {
         return Crust;
     }
+
+    public String toString(){
+        return "You're full!";
+    }
+}
