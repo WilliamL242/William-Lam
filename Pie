@@ -23,8 +23,12 @@ public class Pie {
         System.out.println("You have \"nomed\" " + i + " slices of pie.");
     }
 
+    public double num_pies(int i){
+        return i/8.0;
+    }
+
     void calories(int c, int i) {
-        System.out.println("You ate " + c * i + " Calories of pie");
+        System.out.println("You ate " + num_pies(i) * (c * 8) + " Calories of pie");
     }
 
     public String getFilling() {
