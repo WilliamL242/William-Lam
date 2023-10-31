@@ -15,11 +15,11 @@ public class Pie {
         Filling = f;
     }
 
-    void eat() {
+    public void eat() {
         System.out.println("nom nom");
     }
 
-    void eat(int i) {
+    public void eat(int i) {
         System.out.println("You have \"nomed\" " + i + " slices of pie.");
     }
 
@@ -27,7 +27,7 @@ public class Pie {
         return i/8.0;
     }
 
-    void calories(int c, int i) {
+    public void calories(int c, int i) {
         System.out.println("You ate " + num_pies(i) * (c * 8) + " Calories of pie");
     }
 
@@ -41,5 +41,10 @@ public class Pie {
 
     public String toString(){
         return "You're full!";
+    }
+
+    public boolean pie_area(int r){
+        boolean area = math.Pi * math.pow(math.PI, 2);
+        return area;
     }
 }
