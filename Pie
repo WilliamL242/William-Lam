@@ -43,8 +43,8 @@ public class Pie {
         return "You're full!";
     }
 
-    public boolean pie_area(int r){
-        boolean area = math.Pi * math.pow(math.PI, 2);
+    public double pie_area(int r){
+        double area = Math.PI * Math.pow(Math.PI, 2);
         return area;
     }
 }
