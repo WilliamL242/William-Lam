@@ -3,7 +3,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
+        String[][] map = {{"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"}};
         // final makes the variable a constant
         final Integer c = 350; //calories per slice of pie
         // integer stores integers
