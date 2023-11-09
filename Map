@@ -1,8 +1,21 @@
 public class Map {
-    static void print_map(string[][] map){
+    public void print_map(String[][] map){
+        for (int i = 0; i < map.length; ++i) {
+            System.out.println(" ");
+            for (int j = 0; j < map[i].length; ++j) {
+                System.out.print(map[i][j]);
+            }
+        }
+    }
+
+    public move_left(String[][] map){
+        int[][] user_coords = {}
         for (int i = 0; i < map.length; ++i) {
             for (int j = 0; j < map[i].length; ++j) {
-                System.out.println(map[i][j]);
+                if(map[i][j] == "\uD83D\uDDFF"){
+                    int x_coord = j;
+                    int y_coord = i;
+                }
             }
         }
     }
