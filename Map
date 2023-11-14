@@ -6,17 +6,20 @@ public class Map {
                 System.out.print(map[i][j]);
             }
         }
+        System.out.println();
     }
 
-    public move_left(String[][] map){
-        int[][] user_coords = {}
+    public String[][] move_left(String[][] map){
         for (int i = 0; i < map.length; ++i) {
             for (int j = 0; j < map[i].length; ++j) {
                 if(map[i][j] == "\uD83D\uDDFF"){
-                    int x_coord = j;
-                    int y_coord = i;
+                    if(i > 0){
+                        map[i][j] = "⬜";
+                        map[i - 1][j] = "\uD83D\uDDFF";
+                    }
                 }
             }
         }
+        return map;
     }
 }
