@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
+    private static String icon = "\uD83D\uDDFF";
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        String[][] map = {{"\uD83D\uDDFF", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
+        String[][] map = {{"⬜", icon, "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
                 {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
                 {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
                 {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
@@ -16,8 +17,14 @@ public class Main {
 
         layout.print_map(map);
 
+        String userInput = s.nextLine();
+        if (userInput.toLowerCase().equals("a")){
+            map = layout.move_left(map);
+            layout.print_map(map);
+        }
 
-        final Integer c = 350; //calories per slice of pie
+
+//        final Integer c = 350; //calories per slice of pie
 //        // integer stores integers
 //        Double d = 3.14;
 //        // double stores floats
