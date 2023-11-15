@@ -1,0 +1,30 @@
+public class Icon {
+    private String icon = "\uD83D\uDDFF";
+    private int row;
+    private int column;
+    public void move_left(){
+        if(column>0) column--;
+        else System.out.println("Cannot move left.");
+    }
+    public void setRow(int r)
+    {
+        row = r;
+    }
+    public void setColumn(int c)
+    {
+        column = c;
+    }
+    public int getRow()
+    {
+        return row;
+    }
+    public int getColumn()
+    {
+        return column;
+    }
+    public String toString()
+    {
+        return icon;
+    }
+
+}
