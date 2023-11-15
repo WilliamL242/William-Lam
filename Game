@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Game {
+    private Map map;
+    public Game()
+    {
+        mapSize();
+        //printMap();
+        placeIcon();
+        printMap();
+        move();
+    }
+    public void mapSize()
+    {
+        System.out.println("How large would you like the map to be?");
+        Scanner s = new Scanner(System.in);
+        int side = s.nextInt();
+        map = new Map(side, side);
+    }
+    public void placeIcon()
+    {
+        map.placeIcon();
+    }
+    public void printMap()
+    {
+        map.print();
+    }
+    public void move()
+    {
+        Scanner s = new Scanner(System.in);
+        String userInput = s.nextLine();
+        if (userInput.toLowerCase().equals("a"))
+        {
+           map.moveLeft();
+        }
+        printMap();
+    }
+
+
+}
