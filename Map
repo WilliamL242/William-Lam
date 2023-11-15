@@ -1,25 +1,51 @@
 public class Map {
-    public void print_map(String[][] map){
-        for (int i = 0; i < map.length; ++i) {
+    private int rows;
+    private int columns;
+    private String[][] map;
+    private Icon icon = new Icon();
+
+    public Map(int r, int c)
+    {
+        rows = r;
+        columns =c;
+        map = new String[r][c];
+        for(int i = 0; i < rows; i++)
+        {
+            for(int j = 0; j < columns; j++)
+            {
+                map[i][j] = "□";
+            }
+        }
+    }
+    public Icon getIcon()
+    {
+        return icon;
+    }
+    public void placeIcon()
+    {
+        map[1][2] = icon.toString();
+        icon.setRow(1);
+        icon.setColumn(2);
+    }
+    public String[][] getMap()
+    {
+        return map;
+    }
+    public void print(){
+        for (int i = 0; i < map.length; i++) {
             System.out.println(" ");
-            for (int j = 0; j < map[i].length; ++j) {
+            for (int j = 0; j < map[i].length; j++) {
                 System.out.print(map[i][j]);
             }
         }
         System.out.println();
     }
-
-    public String[][] move_left(String[][] map){
-        for (int i = 0; i < map.length; ++i) {
-            for (int j = 0; j < map[i].length; ++j) {
-                if(map[i][j] == "\uD83D\uDDFF"){
-                    if(i > 0){
-                        map[i][j] = "⬜";
-                        map[i - 1][j] = "\uD83D\uDDFF";
-                    }
-                }
-            }
-        }
-        return map;
+    public void moveLeft()
+    {
+        map[icon.getRow()][icon.getColumn()] = "□";
+        icon.move_left();
+        map[icon.getRow()][icon.getColumn()] = icon.toString();
     }
+
+
 }
