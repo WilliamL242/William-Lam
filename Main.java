@@ -1,27 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
-    private static String icon = "\uD83D\uDDFF";
+
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        String[][] map = {{"⬜", icon, "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"},
-                {"⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜", "⬜"}};
+    Game g = new Game();
 
-        Map layout = new Map();
-
-        layout.print_map(map);
-
-        String userInput = s.nextLine();
-        if (userInput.toLowerCase().equals("a")){
-            map = layout.move_left(map);
-            layout.print_map(map);
-        }
+    }
+}
 
 
 //        final Integer c = 350; //calories per slice of pie
@@ -48,5 +33,4 @@ public class Main {
 //        User_pie.eat(slices_eaten);
 //        User_pie.calories(c, slices_eaten);
 //        System.out.println(User_pie);
-    }
-}
+
