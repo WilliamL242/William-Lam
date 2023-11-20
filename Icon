@@ -2,9 +2,34 @@ public class Icon {
     private String icon = "\uD83D\uDDFF";
     private int row;
     private int column;
+    private int maxRow;
+    private int maxColumn;
+
     public void move_left(){
         if(column>0) column--;
         else System.out.println("Cannot move left.");
+    }
+    public void move_right(){
+        if(column<maxColumn) column++;
+        else System.out.println("Cannot move right.");
+    }
+    public void move_up()
+    {
+        if(row>0) row--;
+        else System.out.println("Cannot move up.");
+    }
+    public void move_down()
+    {
+        if(row<maxRow) row++;
+        else System.out.println("Cannot move down.");
+    }
+    public void setMaxRow(int side)
+    {
+        maxRow = side;
+    }
+    public void setMaxColumn(int side)
+    {
+        maxColumn = side;
     }
     public void setRow(int r)
     {
@@ -22,9 +47,16 @@ public class Icon {
     {
         return column;
     }
+//    public int getMaxRow()
+//    {
+//        return maxRow;
+//    }
+//    public int getMaxColumn()
+//    {
+//        return maxColumn;
+//    }
     public String toString()
     {
         return icon;
     }
-
 }
