@@ -1,11 +1,15 @@
 public class Map {
     private int rows;
     private int columns;
+    private int maxRows;
+    private int maxColumns;
     private String[][] map;
     private Icon icon = new Icon();
 
     public Map(int r, int c)
     {
+        icon.setMaxColumn(c);
+        icon.setMaxRow(r);
         rows = r;
         columns =c;
         map = new String[r][c];
@@ -13,7 +17,7 @@ public class Map {
         {
             for(int j = 0; j < columns; j++)
             {
-                map[i][j] = "□";
+                map[i][j] = "⬜";
             }
         }
     }
@@ -42,10 +46,31 @@ public class Map {
     }
     public void moveLeft()
     {
-        map[icon.getRow()][icon.getColumn()] = "□";
+        map[icon.getRow()][icon.getColumn()] = "⬜";
         icon.move_left();
         map[icon.getRow()][icon.getColumn()] = icon.toString();
     }
+    public void moveRight()
+    {
+        map[icon.getRow()][icon.getColumn()] = "⬜";
+        icon.move_right();
+        map[icon.getRow()][icon.getColumn()] = icon.toString();
+    }
+    public void moveUp()
+    {
+        map[icon.getRow()][icon.getColumn()] = "⬜";
+        icon.move_up();
+        map[icon.getRow()][icon.getColumn()] = icon.toString();
+    }
+    public void moveDown()
+    {
+        map[icon.getRow()][icon.getColumn()] = "⬜";
+        icon.move_down();
+        map[icon.getRow()][icon.getColumn()] = icon.toString();
+    }
 
-
+    public int getRows()
+    {
+        return rows;
+    }
 }
