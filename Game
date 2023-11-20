@@ -5,7 +5,6 @@ public class Game {
     public Game()
     {
         mapSize();
-        //printMap();
         placeIcon();
         printMap();
         move();
@@ -31,10 +30,20 @@ public class Game {
         String userInput = s.nextLine();
         if (userInput.toLowerCase().equals("a"))
         {
-           map.moveLeft();
+            map.moveLeft();
+        }
+        if (userInput.toLowerCase().equals("d"))
+        {
+            map.moveRight();
+        }
+        if (userInput.toLowerCase().equals("w"))
+        {
+            map.moveUp();
+        }
+        if (userInput.toLowerCase().equals("s"))
+        {
+            map.moveDown();
         }
         printMap();
     }
-
-
 }
