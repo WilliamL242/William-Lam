@@ -1,9 +1,7 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-    Game g = new Game();
+        Game g = new Game();
 
     }
 }
@@ -33,4 +31,3 @@ public class Main {
 //        User_pie.eat(slices_eaten);
 //        User_pie.calories(c, slices_eaten);
 //        System.out.println(User_pie);
-
