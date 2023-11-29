@@ -2,12 +2,15 @@ import java.util.Scanner;
 
 public class Game {
     private Map map;
+    private boolean quit = false;
     public Game()
     {
         mapSize();
         placeIcon();
-        printMap();
-        move();
+        while (!quit) {
+            printMap();
+            move();
+        }
     }
     public void mapSize()
     {
@@ -15,6 +18,7 @@ public class Game {
         Scanner s = new Scanner(System.in);
         int side = s.nextInt();
         map = new Map(side, side);
+        System.out.println("Enter wasd to move around or enter q to quit.");
     }
     public void placeIcon()
     {
@@ -23,6 +27,9 @@ public class Game {
     public void printMap()
     {
         map.print();
+    }
+    public boolean getQuit(){
+        return quit;
     }
     public void move()
     {
@@ -43,6 +50,9 @@ public class Game {
         if (userInput.toLowerCase().equals("s"))
         {
             map.moveDown();
+        }
+        if (userInput.toLowerCase().equals("q")){
+            quit = true;
         }
         printMap();
     }
