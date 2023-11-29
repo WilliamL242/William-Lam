@@ -10,7 +10,7 @@ public class Icon {
         else System.out.println("Cannot move left.");
     }
     public void move_right(){
-        if(column<maxColumn) column++;
+        if(column<maxColumn - 1) column++;
         else System.out.println("Cannot move right.");
     }
     public void move_up()
@@ -20,7 +20,7 @@ public class Icon {
     }
     public void move_down()
     {
-        if(row<maxRow) row++;
+        if(row<maxRow - 1) row++;
         else System.out.println("Cannot move down.");
     }
     public void setMaxRow(int side)
@@ -47,7 +47,7 @@ public class Icon {
     {
         return column;
     }
-//    public int getMaxRow()
+    //    public int getMaxRow()
 //    {
 //        return maxRow;
 //    }
